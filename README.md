@@ -4,6 +4,8 @@
 
 [![NPM](https://img.shields.io/npm/v/@miroiu/use-debug-panel.svg)](https://www.npmjs.com/package/@miroiu/use-debug-panel)
 
+[![Example](https://i.imgur.com/KhtlkkR.png)](Example)
+
 ## Install
 
 ```bash
