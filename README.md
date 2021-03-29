@@ -16,6 +16,7 @@ npm install --save-dev @miroiu/use-debug-panel
 
 ```tsx
 import React from 'react';
+import ReactDOM from 'react-dom';
 import {
 	DebugPanelProvider,
 	makeSlider,
