@@ -19,7 +19,7 @@ import {
 	makeSlider,
 	makeColor,
 	useDebugPanel,
-} from 'use-debug-panel';
+} from '@miroiu/use-debug-panel';
 
 const App: React.FC = () => {
 	const { string, slider } = useDebugPanel(
