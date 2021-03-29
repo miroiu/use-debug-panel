@@ -1,0 +1,40 @@
+{
+	"name": "@miroiu/use-debug-panel",
+	"version": "1.0.0",
+	"publishConfig": {
+		"access": "public"
+	},
+	"description": "useDebugPanel provides a panel where you can modify properties of an object",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"publish": "tsc && npm publish"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/miroiu/use-debug-panel.git"
+	},
+	"keywords": [
+		"react",
+		"debug",
+		"panel",
+		"hook"
+	],
+	"author": "Emanuel Miroiu",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/miroiu/use-debug-panel/issues"
+	},
+	"homepage": "https://github.com/miroiu/use-debug-panel#readme",
+	"peerDependencies": {
+		"@emotion/react": "^11.x",
+		"@emotion/styled": "^11.x",
+		"react": "^17.x",
+		"react-dom": "^17.x"
+	},
+	"devDependencies": {
+		"@types/react": "^17.0.3",
+		"@types/react-dom": "^17.0.3",
+		"typescript": "^4.2.3"
+	}
+}
