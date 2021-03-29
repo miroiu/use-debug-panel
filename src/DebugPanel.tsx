@@ -25,6 +25,7 @@ const Title = styled.span`
 	font-weight: 600;
 	margin: 5px;
 	text-align: center;
+	cursor: grab;
 `;
 
 export type DebugPanelType = {
