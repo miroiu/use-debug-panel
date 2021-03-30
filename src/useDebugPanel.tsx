@@ -1,16 +1,21 @@
 import { useContext, useEffect, useState } from 'react';
 import { DebugPanelContext } from './DebugPanelProvider';
-import { ColorType } from './types';
+import { ColorType, PanelOptions } from './types';
 
 export const useDebugPanel = <T extends object>(
 	value: T,
-	title?: string
+	titleOrOptions?: string | PanelOptions
 ): T => {
 	const context = useContext(DebugPanelContext);
 	const [id, setId] = useState<number | null>(null);
 
 	useEffect(() => {
-		const id = context.createPanel(value, title);
+		const id = context.createPanel(
+			value,
+			typeof titleOrOptions === 'string'
+				? { title: titleOrOptions }
+				: titleOrOptions
+		);
 		setId(id);
 		return () => context.removePanel(id);
 		// eslint-disable-next-line react-hooks/exhaustive-deps

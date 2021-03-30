@@ -19,6 +19,9 @@ const DraggableContainer = styled.div`
 	box-shadow: 0px 0px 3px 2px rgba(30, 144, 255, 0.2);
 	border: 1px solid dodgerblue;
 	background-color: white;
+	border-radius: 3px;
+	max-width: 350px;
+	overflow: hidden;
 `.withComponent(Draggable);
 
 const Title = styled.span`

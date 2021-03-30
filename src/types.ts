@@ -17,3 +17,13 @@ export type SliderType = DebugValueType<'slider'> & {
 export type ColorType = DebugValueType<'color'> & {
 	value: string;
 };
+
+export type Position = {
+	x: number;
+	y: number;
+};
+
+export type PanelOptions = {
+	title?: string;
+	position?: Position;
+};

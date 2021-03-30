@@ -1,9 +1,10 @@
 import React, { useState, useCallback, createContext } from 'react';
 import { createPortal } from 'react-dom';
+import { PanelOptions } from 'types';
 import { SmartDebugPanel } from './DebugPanel';
 
 export type DebugPanelContextType = {
-	createPanel: <T extends object>(value: T, title?: string) => number;
+	createPanel: <T extends object>(value: T, options?: PanelOptions) => number;
 	removePanel: (id: number) => void;
 	getResult: <T extends object>(panelId: number) => T;
 };
@@ -24,7 +25,7 @@ export const DebugPanelProvider: React.FC = ({ children }) => {
 	const [panels, setPanels] = useState<PanelType[]>([]);
 
 	const createPanel = useCallback(
-		<T extends object>(value: T, title?: string) => {
+		<T extends object>(value: T, options?: PanelOptions) => {
 			++__DBG_PANEL_ID;
 
 			const id = __DBG_PANEL_ID;
@@ -33,11 +34,11 @@ export const DebugPanelProvider: React.FC = ({ children }) => {
 					...prev,
 					{
 						id: id,
-						title: title ?? 'useDebugPanel',
+						title: options?.title ?? 'useDebugPanel',
 						result: { ...value },
-						position: {
-							x: 30 * id,
-							y: 30 * id,
+						position: options?.position ?? {
+							x: 15 + 35 * prev.length,
+							y: 15 + 50 * prev.length,
 						},
 					},
 				];
