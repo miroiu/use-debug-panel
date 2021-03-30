@@ -3,6 +3,7 @@ import React, { PointerEvent, useState } from 'react';
 
 const DragContainer = styled.div<{ x: number; y: number }>`
 	position: absolute;
+	touch-action: none;
 	top: ${props => props.y}px;
 	left: ${props => props.x}px;
 `;
