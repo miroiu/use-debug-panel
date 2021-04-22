@@ -7,7 +7,8 @@ export const demos = [
   const Demo = () => {
     const { slider, color } = useDebugPanel({
       slider: makeSlider({value: 10, max: 20, min: 5, step: 5}),
-      color: makeColor('#FF0000')
+      color: makeColor('#FF0000'),
+      function: () => alert('Hi!')
     }, {
       title: 'Optional Title',
       position: { x: 50, y: 400 }

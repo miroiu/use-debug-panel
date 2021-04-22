@@ -1,6 +1,6 @@
 {
 	"name": "@miroiu/use-debug-panel",
-	"version": "1.1.2",
+	"version": "1.2.2",
 	"publishConfig": {
 		"access": "public"
 	},
@@ -8,7 +8,8 @@
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"deploy": "tsc && npm publish"
+		"deploy": "tsc && npm publish",
+		"build": "tsc"
 	},
 	"repository": {
 		"type": "git",

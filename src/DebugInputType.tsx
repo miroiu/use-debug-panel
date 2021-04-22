@@ -98,3 +98,7 @@ export const GenericInput: React.FC<InputProps<any>> = ({ value }) => {
 		/>
 	);
 };
+
+export const FunctionInput: React.FC<InputProps<() => void>> = ({ value }) => {
+	return <button onClick={value}>Execute</button>;
+};

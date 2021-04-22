@@ -7,6 +7,7 @@ import {
 	GenericInput,
 	SliderInput,
 	ColorInput,
+	FunctionInput,
 } from './DebugInputType';
 import { DebugValueType, InputProps } from './types';
 
@@ -18,6 +19,7 @@ const inputTypeMap = new Map<string, React.FC<InputProps<any>>>([
 	['date', DateInput],
 	['object', GenericInput],
 	['color', ColorInput],
+	['function', FunctionInput],
 ]);
 
 export const registerDebugInput = <

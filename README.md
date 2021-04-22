@@ -9,7 +9,7 @@
 ## Install
 
 ```bash
-npm install --save-dev @miroiu/use-debug-panel
+npm install @miroiu/use-debug-panel
 ```
 
 ## Usage
@@ -33,6 +33,7 @@ const App: React.FC = () => {
 			date: new Date(),
 			slider: makeSlider(10),
 			color: makeColor('#00aaff'),
+			function: () => alert('Hi'),
 			array: [1, 2, 4, 5],
 			object: {},
 			undefined: undefined,
